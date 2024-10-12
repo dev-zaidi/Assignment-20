@@ -105,3 +105,89 @@ function counting(start,end){
 }
 // counting(2,8);
 
+function calcualteHypotenuse(base,pependicular){
+   
+   function calculateSquare(value){
+    return value**(2);
+   }
+   baseSquare= calculateSquare(base);
+   perpendicularSquare= calculateSquare(pependicular);
+
+   var hypotenuse=(baseSquare+perpendicularSquare)**(1/2);
+
+    console.log(hypotenuse);
+}
+
+// calcualteHypotenuse(4,3);
+
+// function AreaRectange(width,height){
+//     var width=prompt("Enter width");
+//     var height=prompt("enter height");
+//     var area=width*height;
+    
+//     console.log(area);
+// }
+// AreaRectange();
+
+function AreaRectange2(width,height){
+    var width=2;
+    var height=5;
+    var area=width*height;
+    
+    console.log(area);
+}
+// AreaRectange2();
+
+function palindrome() {
+    var input = prompt("Enter any word to check if its palindrome").toUpperCase();
+    var reverseWord = "";
+    for (i = input.length - 1; i >= 0; i--) {
+      reverseWord = reverseWord + input[i];
+    }
+    if (input === reverseWord) {
+      console.log(
+        `The word is Palindrome. ${input} written backwards remains ${reverseWord}`
+      );
+    } else console.log("The word is not Palindrome");
+  }
+
+// palindrome();
+
+
+function capitalizeFirstLetterOfEachWord(str) {
+    const words = str.split(' ');
+    let result = '';
+
+    for (let i = 0; i < words.length; i++) {
+        const word = words[i]; 
+        if (word.length > 0) {
+            
+            result += word.charAt(0).toUpperCase() + word.slice(1);
+        }
+
+        if (i < words.length - 1) {
+            result += ' ';
+        }
+    }
+    console.log(result);
+}
+
+capitalizeFirstLetterOfEachWord("the quick brown fox");
+
+
+function calCircumference(radius){
+     var circumference= 2*(3.14)*radius;
+    //  return circumference;
+     console.log("THE CIRCUMFERENCE IS: "+ circumference)
+}
+function calArea(radius){
+    var area= (3.14)*radius*radius;
+    // return area;
+    console.log("THE AREA IS: "+ area)
+
+}
+ calCircumference(5);
+ calArea(5);
+
+
+ 
